@@ -23,20 +23,22 @@ class acf_field_fonticonpicker extends acf_field {
 
     	// Settings
 		$this->settings = array(
-			'path' 		=> apply_filters('acf/helpers/get_path', __FILE__),
-			'dir' 		=> apply_filters('acf/helpers/get_dir', __FILE__),
-			'version' 	=> '1.0.0'
+			'dir' 		=> 	apply_filters('acf/helpers/get_dir', __FILE__),
+			'path'		=>	apply_filters('acf/helpers/get_path', __FILE__),
+			'config' 	=> 	apply_filters('acf/helpers/get_path', __FILE__) . 'icons/config.json',
+			'icons'		=>	apply_filters('acf/helpers/get_dir', __FILE__) . 'icons/css/fontello.css',
+			'version' 	=> 	'1.0.0'
 		);
-
-		// Register icons style
-		wp_register_style( 'acf-fonticonpicker-icons', $this->settings['dir'] . 'icons/css/fontello.css' );
+		
+		// Apply a filter so that you can load icon set from theme
+		$this->settings = apply_filters( 'acf/acf_field_fonticonpicker/settings', $this->settings );
 		
 		// Enqueue icons style in the frontend
 		add_action( 'wp_enqueue_scripts', array( $this, 'frontend_enqueue' ) );
 
 		// Load icons list from the icons JSON file
 		if ( is_admin() ){
-			$json_file = @file_get_contents( $this->settings['path'] . 'icons/config.json' );
+			$json_file = @file_get_contents( $this->settings['config'] );
 			$this->json_content = @json_decode( $json_file, true );
 		}
 
@@ -48,6 +50,8 @@ class acf_field_fonticonpicker extends acf_field {
 	 *  @since	1.0.0
 	 */
 	function frontend_enqueue() {
+		// Register icons style
+		wp_register_style( 'acf-fonticonpicker-icons', $this->settings['icons'] );
 		wp_enqueue_style( 'acf-fonticonpicker-icons' );
 	}
 
@@ -91,18 +95,9 @@ class acf_field_fonticonpicker extends acf_field {
 		
 		// Styles
 		wp_register_style( 'acf-fonticonpicker-style', $this->settings['dir'] . 'css/jquery.fonticonpicker.min.css', false, $this->settings['version'] );
-		wp_enqueue_style( 'acf-fonticonpicker-style' );
-
-	}
-
-
-	/**
-	 *  input_admin_head()
-	 *
-	 *  @since	1.0.0
-	 */
-	function input_admin_head() {
-		wp_enqueue_style( 'acf-fonticonpicker-icons' );
+		wp_register_style( 'acf-fonticonpicker-icons', $this->settings['icons'] );
+		wp_enqueue_style( array( 'acf-fonticonpicker-style', 'acf-fonticonpicker-icons' ) );
+		
 	}
 
 } // Class acf_field_fonticonpicker

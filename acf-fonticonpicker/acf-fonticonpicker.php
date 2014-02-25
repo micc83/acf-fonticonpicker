@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Advanced Custom Fields: FontIconPicker
-Plugin URI: https://github.com/micc83/acf-fontIconPicker
+Plugin URI: http://codeb.it/fonticonpicker
 Description: A simple Font Icons Picker for ACF
 Version: 1.0.0
 Author: Alessandro Benoit
-Author URI: http://codeb.it/fonticonpicker
+Author URI: http://codeb.it/
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
