@@ -1,12 +1,7 @@
-# ACF { fontIconPicker
+ACF { fontIconPicker
+==============
 
 Adds a Fonts Icons Picker field type for the [Advanced Custom Fields](http://wordpress.org/extend/plugins/advanced-custom-fields/) WordPress plugin. Go to the [official plugin page](http://codeb.it/fonticonpicker/#acf) for custom configuration and example of use.
-
------------------------
-
-### Overview
-
-A simple Font Icons Picker for ACF
 
 ### Compatibility
 
