@@ -17,7 +17,7 @@
 		$(postbox).find('.acf-iconpicker').each(function(){
 			
 			// The check is made so repeaters wont trigger the script before time
-			if ( $(this).is(':visible') ){
+			if ( !$(this).parents('.row-clone').length ){
 				
 				// Let's iconpick!!!
 				$(this).fontIconPicker();
