@@ -16,8 +16,8 @@ class acf_field_fonticonpicker extends acf_field {
 		
 		// Vars
 		$this->name = 'fonticonpicker';
-		$this->label = __('Font Icon Picker');
-		$this->category = __("Choice", 'acf');
+		$this->label = __('Icon Picker');
+		$this->category = __("jQuery", 'acf');
 
     	parent::__construct();
 
