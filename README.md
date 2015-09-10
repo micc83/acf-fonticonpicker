@@ -7,7 +7,7 @@ Adds a Fonts Icons Picker field type for the [Advanced Custom Fields](http://wor
 
 This add-on will work with:
 
-* version 4 and up of ACF
+* version 4 and 5 (thx to [WilkoManger](https://github.com/WilkoManger)) of ACF
 
 * Firefox (edge), Safari (edge), Chrome (edge), IE8+.
 
@@ -32,4 +32,4 @@ include_once('acf-fonticonpicker/acf-fonticonpicker.php');
 
 jQuery fontIconPicker has been made by [me](http://codeb.it). You can contact me at micc83@gmail.com or [twitter](https://twitter.com/Micc1983) for any issue or feauture request.
 
-I really have to thank miniMAC for the idea, Zeno Rocha for jQuery plugin boilerplate, Dave Gandy for the beautiful set of icons and Elliot Condon for the amazing Advanced Custom Field WordPress plugin.
+I really have to thank miniMAC for the idea, Zeno Rocha for jQuery plugin boilerplate, Dave Gandy for the beautiful set of icons, WilkoManger for adding support for ACF5 and Elliot Condon for the amazing work done on Advanced Custom Field.
