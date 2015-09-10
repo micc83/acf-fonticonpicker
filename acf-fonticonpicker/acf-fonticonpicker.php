@@ -18,8 +18,11 @@ class acf_field_fonticonpicker_plugin {
 	 */
 	function __construct() {
 
-		// Version 4+
+		// Version 4
 		add_action('acf/register_fields', array($this, 'register_fields'));
+		
+		// Version 5
+		add_action('acf/include_field_types',  array($this, 'include_field_types'));
 
 	}
 
@@ -30,6 +33,10 @@ class acf_field_fonticonpicker_plugin {
 	 */
 	function register_fields() {
 		include_once('fonticonpicker-v4.php');
+	}
+	
+	function include_field_types( $version ) {
+		include_once('fonticonpicker-v5.php');
 	}
 
 } // Class acf_field_fonticonpicker_plugin
