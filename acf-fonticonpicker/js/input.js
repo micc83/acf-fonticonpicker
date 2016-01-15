@@ -14,7 +14,7 @@
         }); 
     } else {
         // ACF4
-        $(document).on('acf/include_fields', function(e, postbox){
+        $(document).on('acf/include_fields acf/setup_fields', function(e, postbox){
             enableFontIconPickerFor($(postbox));
         });
     }
