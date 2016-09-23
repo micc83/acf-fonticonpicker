@@ -1,0 +1,16 @@
+{
+  "name": "micc83/acf-fonticonpicker",
+  "description": "ACF-FontIconPicker is a Fonts Icons Picker field type for the Advanced Custom Fields WordPress plugin.",
+  "keywords": ["wordpress", "plugin", "acf", "iconpicker"],
+  "license": "GPLv2",
+  "authors": [
+    {
+      "name": "micc83",
+      "homepage": "https://github.com/micc83"
+    }
+  ],
+  "type": "wordpress-plugin",
+  "require": {
+    "php": ">=5.3.2"
+  }
+}
