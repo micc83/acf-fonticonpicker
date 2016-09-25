@@ -20,6 +20,25 @@ This add-on can be treated as both a WP plugin and a theme include.
 1. Copy the 'acf-fonticonpicker' folder into your plugins folder
 2. Activate the plugin via the Plugins admin page
 
+**Install with Composer**
+
+If your project is already setup to use composer use the command below to install the plugin.
+
+```bash
+$ composer require "micc83/acf-fonticonpicker:dev-master"
+```
+
+Or add the below to your `composer.json` and update (using `composer update`). Note `composer/installers` package is required to install the plugin to the correct location.
+
+```json
+{
+    "require": {
+        "composer/installers": "*",
+        "micc83/acf-fonticonpicker": "dev-master"
+    }
+}
+```
+
 **Include within theme**
 
 1.	Copy the 'acf-fonticonpicker' folder into your theme folder (can use sub folders).
