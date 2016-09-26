@@ -13,11 +13,11 @@ This add-on will work with:
 
 ### Installation
 
-This add-on can be treated as both a WP plugin and a theme include.
+This add-on can be treated as a WP plugin, a composer package or a theme include.
 
-**Install as Plugin**
+**Install as WP Plugin**
 
-1. Copy the 'acf-fonticonpicker' folder into your plugins folder
+1. Copy the whole content of the repository in a new `acf-fonticonpicker` folder within your `wp-content/plugins` folder
 2. Activate the plugin via the Plugins admin page
 
 **Install with Composer**
@@ -41,8 +41,8 @@ Or add the below to your `composer.json` and update (using `composer update`). N
 
 **Include within theme**
 
-1.	Copy the 'acf-fonticonpicker' folder into your theme folder (can use sub folders).
-2.	Edit your functions.php file and add the code below:
+1.	Copy the whole content of this repository into an `acf-fonticonpicker` folder within your theme folder (can use sub folders).
+2.	Edit your `functions.php` file and add the code below:
 
 ```php
 include_once('acf-fonticonpicker/acf-fonticonpicker.php');
